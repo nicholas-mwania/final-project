@@ -1,0 +1,386 @@
+body {
+  background: url('https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 0;
+  padding-bottom: 60px; /* space for fixed footer */
+}
+
+h1 {
+  color: #2c3e50;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+h2 {
+  color: #2980b9;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+h3 {
+  color: #8e44ad;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+ul li {
+  margin-bottom: 5px;
+}
+a {
+  color: #3498db;
+  text-decoration: brown;
+}
+
+/* Enhance header navigation for better dropdown and appearance */
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: rgba(34,34,34,0.95);
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+header ul li {
+    flex: 1 1 0;
+    text-align: center;
+    padding: 1em 0.5em;
+    border-right: 1px solid #444;
+    font-size: 1.1em;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+header ul li:last-child {
+    border-right: none;
+}
+header ul li:hover, header ul li:focus-within {
+    background: #1a73e8;
+    color: #ffd700;
+}
+
+/* Dropdown styles for About and Contact Us */
+.about-dropdown, .contact-dropdown {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    background: #fff;
+    color: #222;
+    min-width: 260px;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    z-index: 10;
+    font-size: 0.98em;
+    text-align: left;
+    margin-top: 0.5em;
+}
+header ul li:hover .about-dropdown,
+header ul li:focus-within .about-dropdown,
+header ul li:hover .contact-dropdown,
+header ul li:focus-within .contact-dropdown {
+    display: block;
+}
+.about-dropdown p:first-child {
+    margin-top: 0;
+    font-weight: bold;
+    color: #1a73e8;
+}
+.contact-dropdown a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+.contact-dropdown a:hover {
+    text-decoration: underline;
+}
+
+/* Partners carousel styles */
+.partners-carousel {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    background: #fff;
+    min-width: 340px;
+    padding: 1em 0.5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    z-index: 10;
+    display: none;
+    overflow: hidden;
+    margin-top: 0.5em;
+}
+header ul li:hover .partners-carousel,
+header ul li:focus-within .partners-carousel {
+    display: block;
+}
+.carousel-track {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    animation: scroll-logos 18s linear infinite;
+}
+.partner-logo {
+    height: 40px;
+    width: auto;
+    filter: grayscale(0.2) brightness(0.9);
+    transition: transform 0.3s, filter 0.3s;
+}
+.partner-logo:hover {
+    transform: scale(1.15) rotate(-5deg);
+    filter: grayscale(0) brightness(1.1);
+}
+@keyframes scroll-logos {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Double the logos for seamless loop */
+.carousel-track {
+    width: max-content;
+}
+
+@media (max-width: 600px) {
+    header ul {
+        flex-direction: column;
+        border-radius: 0 0 12px 12px;
+    }
+    header ul li {
+        border-right: none;
+        border-bottom: 1px solid #444;
+    }
+    header ul li:last-child {
+        border-bottom: none;
+    }
+    .about-dropdown, .contact-dropdown {
+        left: 0;
+        transform: none;
+        min-width: 180px;
+    }
+    .partners-carousel {
+        min-width: 180px;
+        left: 0;
+        transform: none;
+    }
+    .partner-logo {
+        height: 28px;
+    }
+}
+
+/* Brand List Styles */
+.brand-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.brand-list li {
+    background: rgba(255,255,255,0.92);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    padding: 1.5em 2em 1em 2em;
+    min-width: 220px;
+    margin: 0.5em 0;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+
+.brand-list li:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
+
+.brand-shoe {
+    width: 100px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 0.7em;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+    background: #f7f7f7;
+    border: 2px solid #e0e0e0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.brand-label {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a73e8;
+    color: #fff;
+    padding: 0.2em 0.8em;
+    border-radius: 8px;
+    font-size: 0.95em;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+    pointer-events: none;
+}
+
+/* Modal styles for login/signup */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(0,0,0,0.45);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background: #fff;
+    margin: 5% auto;
+    padding: 2em 2.5em 1.5em 2.5em;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 350px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    position: relative;
+    text-align: left;
+}
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.close:hover {
+    color: #e63946;
+}
+.modal-content h2 {
+    margin-top: 0;
+    color: #1a73e8;
+    text-align: center;
+}
+.modal-content label {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 0.3em;
+    font-weight: 500;
+}
+.modal-content input[type="email"],
+.modal-content input[type="password"] {
+    width: 100%;
+    padding: 0.6em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+}
+.modal-content button[type="submit"] {
+    width: 100%;
+    background: #1a73e8;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.7em;
+    font-size: 1.1em;
+    margin-top: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.modal-content button[type="submit"]:hover {
+    background: #155ab6;
+}
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 1em 0.5em 1em 0.5em;
+        max-width: 95vw;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header ul, footer ul {
+        flex-direction: column;
+    }
+    header ul li, footer ul li {
+        border-right: none;
+        border-bottom: 1px solid #444;
+    }
+    header ul li:last-child, footer ul li:last-child {
+        border-bottom: none;
+    }
+    body {
+        padding-bottom: 120px;
+    }
+    .brand-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-dropdown, .contact-dropdown {
+        left: 0;
+        transform: none;
+        min-width: 180px;
+    }
+}
+
+/* Social Media Icons in Footer */
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2em;
+    margin-top: 1em;
+}
+.social-media a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s;
+}
+.social-media a:hover {
+    transform: scale(1.18) rotate(-8deg);
+}
+.social-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(0.2) brightness(0.9);
+    transition: filter 0.2s;
+}
+.social-media a:hover img {
+    filter: grayscale(0) brightness(1.1);
+}
+@media (max-width: 600px) {
+    .social-media {
+        gap: 0.7em;
+        margin-top: 0.7em;
+    }
+    .social-media a {
+        width: 26px;
+        height: 26px;
+    }
+}
