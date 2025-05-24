@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us | SoleStyle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <div class="nav-left">
+            <span class="site-title">SoleStyle</span>
+        </div>
+        <div class="nav-right">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="brands.html" class="nav-link">Brands</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="#loginModal" class="nav-link" id="loginBtn">Login</a>
+            <a href="#signupModal" class="nav-link" id="signupBtn">Signup</a>
+            <button id="themeToggle" aria-label="Toggle dark mode" style="margin-left:1em;">🌙</button>
+        </div>
+    </nav>
+    <!-- Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <form id="loginForm">
+                <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" name="loginEmail" required>
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeSignup">&times;</span>
+            <form id="signupForm">
+                <label for="signupEmail">Email:</label>
+                <input type="email" id="signupEmail" name="signupEmail" required>
+                <label for="signupPassword">Password:</label>
+                <input type="password" id="signupPassword" name="signupPassword" required>
+                <label for="signupConfirm">Confirm Password:</label>
+                <input type="password" id="signupConfirm" name="signupConfirm" required>
+                <button type="submit">Signup</button>
+            </form>
+        </div>
+    </div>
+    <main>
+        <h1>About SoleStyle</h1>
+        <p>Welcome to SoleStyle! We are passionate about connecting you with the best footwear brands and trends.</p>
+        <p>Our mission is to provide a curated selection of the latest and greatest in footwear, ensuring quality, comfort, and style for every customer. Whether you're a sneakerhead, an athlete, or just looking for your next favorite pair, we've got you covered.</p>
+        <h2>Our Values</h2>
+        <ul>
+            <li><strong>Quality:</strong> We only feature trusted brands and products.</li>
+            <li><strong>Customer Focus:</strong> Your satisfaction is our top priority.</li>
+            <li><strong>Innovation:</strong> We stay ahead of trends to bring you the best.</li>
+        </ul>
+        <h2>Meet the Team</h2>
+        <p>Our diverse team is made up of footwear enthusiasts, designers, and customer service experts dedicated to making your shopping experience exceptional.</p>
+    </main>
+    <footer>
+        <p>&copy; 2023 SoleStyle. All rights reserved.</p>
+        <p>Follow us on social media for the latest updates and promotions!</p>
+        <div class="social-media">
+            <a href="https://instagram.com/yourbrand" target="_blank" aria-label="Instagram"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
+            <a href="https://facebook.com/yourbrand" target="_blank" aria-label="Facebook"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
+            <a href="https://twitter.com/yourbrand" target="_blank" aria-label="Twitter"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter"></a>
+            <a href="https://tiktok.com/@yourbrand" target="_blank" aria-label="TikTok"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok"></a>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

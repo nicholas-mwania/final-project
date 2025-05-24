@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact | SoleStyle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <span class="site-title">SoleStyle</span>
+        </div>
+        <div class="nav-right">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="brands.html" class="nav-link">Brands</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="#loginModal" class="nav-link" id="loginBtn">Login</a>
+            <a href="#signupModal" class="nav-link" id="signupBtn">Signup</a>
+        </div>
+    </nav>
+    <main>
+        <h1>Contact Us</h1>
+        <p>Have questions or feedback? Reach out to us using the form below or email us at <a href="mailto:info@solestyle.com">info@solestyle.com</a>.</p>
+        <form class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </main>
+    <footer>
+        <!-- Your footer here -->
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

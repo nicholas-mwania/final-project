@@ -1,23 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Final Project</title>
+    <title>SoleStyle | Modern Footwear & Top Brands</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
         <div class="nav-left">
-            <span class="site-title">Shoe Store</span>
+            <span class="site-title">SoleStyle</span>
         </div>
         <div class="nav-right">
-            <a href="#login" class="nav-link" id="loginBtn">Login</a>
-            <a href="#signup" class="nav-link" id="signupBtn">Signup</a>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="brands.html" class="nav-link">Brands</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="blog.html" class="nav-link">Blog</a>
+            <a href="#loginModal" class="nav-link" id="loginBtn">Login</a>
+            <a href="#signupModal" class="nav-link" id="signupBtn">Signup</a>
+            <button id="themeToggle" aria-label="Toggle dark mode" style="margin-left:1em;">🌙</button>
         </div>
     </nav>
+    <!-- Special Offer Banner -->
+    <div class="special-offer-banner" role="alert">
+        🎉 Special Offer: Get 20% off all sneakers! Use code <strong>SOLE20</strong> at checkout. Limited time only!
+        <button class="close-offer" aria-label="Close offer">&times;</button>
+    </div>
+    <!-- Hero Section Start -->
+    <section class="hero modern-hero" style="position:relative; min-height: 520px; display: flex; align-items: center; justify-content: center; background: linear-gradient(120deg, #f8fafc 60%, #e0e7ef 100%); overflow: hidden;">
+  <div class="hero-bg-shape" style="position:absolute;top:-80px;left:-120px;width:600px;height:600px;background:radial-gradient(circle at 60% 40%, #e63946 0%, #f8fafc 80%);opacity:0.18;z-index:0;border-radius:50%;"></div>
+  <div class="hero-bg-shape" style="position:absolute;bottom:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle at 40% 60%, #1a73e8 0%, #e0e7ef 90%);opacity:0.13;z-index:0;border-radius:50%;"></div>
+  <div class="hero-content" style="position:relative;z-index:2;max-width:650px;text-align:left;padding:2.5em 2em;">
+    <h1 style="font-size:3.2em; font-family:'Montserrat',sans-serif; margin-bottom:0.4em; letter-spacing:1px; color:#222;">
+      Elevate Your Every Step
+    </h1>
+    <p style="font-size:1.35em; margin-bottom:2em; color:#444;">
+      Unleash your style with the latest sneaker drops, exclusive collabs, and timeless classics. Shop the world’s top brands and find your perfect fit for every adventure.
+    </p>
+    <div style="display:flex;gap:1.2em;align-items:center;">
+      <a href="#shoe-brands" class="hero-btn" style="background:#e63946;color:#fff;padding:1.1em 2.4em;font-size:1.18em;border-radius:32px;box-shadow:0 4px 18px rgba(230,57,70,0.13);transition:background 0.2s,transform 0.2s;display:inline-block;text-decoration:none;font-weight:bold;letter-spacing:1px;">
+        Shop Now
+      </a>
+      <a href="#faq" class="hero-btn-secondary" style="background:transparent;color:#e63946;padding:1.1em 2.2em;font-size:1.1em;border-radius:32px;border:2px solid #e63946;transition:background 0.2s,transform 0.2s;display:inline-block;text-decoration:none;font-weight:bold;letter-spacing:1px;">
+        Learn More
+      </a>
+    </div>
+    <div style="margin-top:2.2em;display:flex;gap:2em;align-items:center;">
+      <div style="display:flex;align-items:center;gap:0.5em;">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/nike.svg" alt="Nike" style="width:32px;height:32px;">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/adidas.svg" alt="Adidas" style="width:32px;height:32px;">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/puma.svg" alt="Puma" style="width:32px;height:32px;">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jordan.svg" alt="Jordan" style="width:32px;height:32px;">
+      </div>
+      <span style="color:#888;font-size:1em;">Trusted by 10,000+ sneaker lovers</span>
+    </div>
+  </div>
+  <div class="hero-image" style="position:relative;z-index:2;flex:1;display:flex;align-items:center;justify-content:center;">
+    <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,q_auto:eco/2b1b2e2e-2e2e-4e2e-8e2e-2e2e2e2e2e2e/air-max-270-mens-shoes-KkLcGR.png"
+         alt="Featured Sneaker"
+         style="width:440px;max-width:48vw;filter:drop-shadow(0 16px 40px rgba(230,57,70,0.16));transform:rotate(-8deg) scale(1.08);" />
+    <div style="position:absolute;bottom:18px;right:12%;background:rgba(255,255,255,0.93);border-radius:18px;padding:1em 1.5em;box-shadow:0 2px 16px rgba(0,0,0,0.07);display:flex;align-items:center;gap:1em;">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/star.svg" alt="Star" style="width:22px;height:22px;filter:invert(64%) sepia(98%) saturate(749%) hue-rotate(330deg) brightness(104%) contrast(101%);">
+      <span style="font-size:1.1em;color:#222;"><strong>4.9/5</strong> (2,300+ reviews)</span>
+    </div>
+  </div>
+</section>
+<!-- Hero Section End -->
     <div id="loginModal" class="modal">
         <div class="modal-content">
             <span class="close" id="closeLogin">&times;</span>
-            <h2>Login</h2>
             <form id="loginForm">
                 <label for="loginEmail">Email:</label>
                 <input type="email" id="loginEmail" name="loginEmail" required>
@@ -30,7 +83,6 @@
     <div id="signupModal" class="modal">
         <div class="modal-content">
             <span class="close" id="closeSignup">&times;</span>
-            <h2>Signup</h2>
             <form id="signupForm">
                 <label for="signupEmail">Email:</label>
                 <input type="email" id="signupEmail" name="signupEmail" required>
@@ -42,47 +94,16 @@
             </form>
         </div>
     </div>
-    <header>
-        <ul>
-            <li>Brands</li>
-            <li>partners
-                <div class="partners-carousel">
-                    <div class="carousel-track">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike" class="partner-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" alt="Adidas" class="partner-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Puma_AG.svg" alt="Puma" class="partner-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Reebok_2019_logo.svg" alt="Reebok" class="partner-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/New_Balance_logo.svg" alt="New Balance" class="partner-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Converse_logo.svg" alt="Converse" class="partner-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Vans_logo.svg" alt="Vans" class="partner-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Asics_Logo.svg" alt="ASICS" class="partner-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Skechers_logo.svg" alt="Skechers" class="partner-logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Under_armour_logo.svg" alt="Under Armour" class="partner-logo">
-                    </div>
-                </div>
-            </li>
-            <li>about
-                <div class="about-dropdown">
-                    <p><strong>About Shoe Store</strong></p>
-                    <p>Founded in 2010, Shoe Store is dedicated to bringing the latest and greatest in footwear to our customers. We partner with top brands to ensure quality, comfort, and style for every step you take. Our mission is to make every customer feel confident and comfortable in their shoes, whether for sports, work, or everyday life.</p>
-                </div>
-            </li>
-            <li>contact us
-                <div class="contact-dropdown">
-                    <p>Email: <a href="mailto:shoestore@example.com">shoestore@example.com</a></p>
-                    <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-                </div>
-            </li>
-        </ul>
-    </header>
-    <main>
+    <!-- Toast Notification -->
+<div id="toast" style="display:none;position:fixed;bottom:40px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:1em 2em;border-radius:24px;box-shadow:0 4px 16px rgba(0,0,0,0.12);z-index:9999;font-size:1.1em;"></div>
+    <main role="main">
         <section id="shoe-brands">
-            <h2>Shoe Brands</h2>
+            <h2>Top Shoe Brands</h2>
             <ul class="brand-list">
-                <li>
+                <li data-brand="Nike">
+                    <button class="wishlist-btn" aria-label="Add to wishlist">♡</button>
                     <span class="brand-label">Nike</span>
                     <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,q_auto:eco/2b1b2e2e-2e2e-4e2e-8e2e-2e2e2e2e2e2e/air-max-270-mens-shoes-KkLcGR.png" alt="Nike Air Max" class="brand-shoe">
-                    <strong>Nike</strong><br>
                     <span>Popular for sports and lifestyle shoes.</span>
                     <div class="brand-price">$120</div>
                     <div class="brand-colors">
@@ -91,10 +112,9 @@
                         <span class="brand-color" style="background:#e63946;"></span>
                     </div>
                 </li>
-                <li>
+                <li data-brand="Adidas">
                     <span class="brand-label">Adidas</span>
-                    <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/6e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e_9366/Ultraboost_21_Shoes_White_FY0377_01_standard.jpg" alt="Adidas Ultraboost" class="brand-shoe">
-                    <strong>Adidas</strong><br>
+                    <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/6e2e2e2e2e2e2e2e2e2e2e2e2e2e2e_9366/Ultraboost_21_Shoes_White_FY0377_01_standard.jpg" alt="Adidas Ultraboost" class="brand-shoe">
                     <span>Known for innovation and comfort.</span>
                     <div class="brand-price">$140</div>
                     <div class="brand-colors">
@@ -103,10 +123,9 @@
                         <span class="brand-color" style="background:#222;"></span>
                     </div>
                 </li>
-                <li>
+                <li data-brand="Puma">
                     <span class="brand-label">Puma</span>
                     <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa/global/374915/01/sv01/fnd/PNA/w/1000/h/1000/fmt/png" alt="Puma Classic" class="brand-shoe">
-                    <strong>Puma</strong><br>
                     <span>Stylish and performance-oriented footwear.</span>
                     <div class="brand-price">$90</div>
                     <div class="brand-colors">
@@ -115,150 +134,418 @@
                         <span class="brand-color" style="background:#e63946;"></span>
                     </div>
                 </li>
-                <li>
+                <li data-brand="Reebok">
                     <span class="brand-label">Reebok</span>
-                    <img src="https://reebok.com/resource/image/1683262/portrait_ratio1x1/600/600/2b1b2e2e2e2e2e2e2e2e2e2e2e2e2e2e/2b1b2e2e2e2e2e2e2e2e2e2e2e2e2e2e/reebok-classic-leather-shoes.jpg" alt="Reebok Classic" class="brand-shoe">
-                    <strong>Reebok</strong><br>
+                    <img src="https://reebok.com/resource/image/1683262/portrait_ratio1x1/600/600/2b1b2e2e2e2e2e2e2e2e2e2e2e2e2e2e/2b1b2e2e2e2e2e2e2e2e2e2e2e2e2e/reebok-classic-leather-shoes.jpg" alt="Reebok Classic" class="brand-shoe">
                     <span>Classic and modern athletic shoes.</span>
                     <div class="brand-price">$80</div>
-                    <div class="brand-colors">
-                        <span class="brand-color" style="background:#fff;"></span>
-                        <span class="brand-color" style="background:#222;"></span>
-                        <span class="brand-color" style="background:#a8dadc;"></span>
                     </div>
                 </li>
-                <li>
+                <li data-brand="New Balance">
                     <span class="brand-label">New Balance</span>
                     <img src="https://nb.scene7.com/is/image/NB/m990gl5_nb_02_i?$pdpflexf2$&wid=440&hei=440" alt="New Balance 990" class="brand-shoe">
-                    <strong>New Balance</strong><br>
                     <span>Famous for running and walking shoes.</span>
-                    <div class="brand-price">$110</div>
-                    <div class="brand-colors">
-                        <span class="brand-color" style="background:#bfc0c0;"></span>
-                        <span class="brand-color" style="background:#222;"></span>
-                        <span class="brand-color" style="background:#e63946;"></span>
-                    </div>
+                    <div class="brand-price">$110</div> 
                 </li>
-                <li>
+                <li data-brand="Converse">
                     <span class="brand-label">Converse</span>
                     <img src="https://www.converse.com/on/demandware.static/-/Sites-converse-master-catalog/default/dw2b2e2e2e/images/a_107/162050C_A_107X1.jpg" alt="Converse Chuck Taylor" class="brand-shoe">
-                    <strong>Converse</strong><br>
                     <span>Iconic canvas sneakers.</span>
                     <div class="brand-price">$60</div>
-                    <div class="brand-colors">
-                        <span class="brand-color" style="background:#fff;"></span>
-                        <span class="brand-color" style="background:#222;"></span>
-                        <span class="brand-color" style="background:#e63946;"></span>
-                    </div>
                 </li>
-                <li>
+                <li data-brand="Vans">
                     <span class="brand-label">Vans</span>
                     <img src="https://images.vans.com/is/image/VansBrand/ClassicSlipOn-BlackWhiteVN000EYEBLK-HERO?wid=800&hei=800&fmt=png-alpha" alt="Vans Classic" class="brand-shoe">
-                    <strong>Vans</strong><br>
                     <span>Skateboarding and casual shoes.</span>
                     <div class="brand-price">$65</div>
-                    <div class="brand-colors">
-                        <span class="brand-color" style="background:#fff;"></span>
-                        <span class="brand-color" style="background:#222;"></span>
-                        <span class="brand-color" style="background:#f4d35e;"></span>
-                    </div>
                 </li>
-                <li>
+                <li data-brand="ASICS">
                     <span class="brand-label">ASICS</span>
                     <img src="https://images.asics.com/is/image/asics/1011A675_020_SR_RT_GLB?$zoom$" alt="ASICS Gel" class="brand-shoe">
-                    <strong>ASICS</strong><br>
                     <span>Performance running shoes.</span>
                     <div class="brand-price">$100</div>
-                    <div class="brand-colors">
-                        <span class="brand-color" style="background:#bfc0c0;"></span>
-                        <span class="brand-color" style="background:#222;"></span>
-                        <span class="brand-color" style="background:#1a73e8;"></span>
-                    </div>
                 </li>
-                <li>
+                <li data-brand="Skechers">
                     <span class="brand-label">Skechers</span>
                     <img src="https://skechers.com/on/demandware.static/-/Sites-skechers-master-catalog/default/dw2b2e2e2e/images/large/232040_BBK.jpg" alt="Skechers" class="brand-shoe">
-                    <strong>Skechers</strong><br>
                     <span>Comfort-focused casual and athletic shoes.</span>
                     <div class="brand-price">$75</div>
-                    <div class="brand-colors">
-                        <span class="brand-color" style="background:#222;"></span>
-                        <span class="brand-color" style="background:#fff;"></span>
-                        <span class="brand-color" style="background:#a8dadc;"></span>
-                    </div>
                 </li>
-                <li>
+                <li data-brand="Under Armour">
                     <span class="brand-label">Under Armour</span>
                     <img src="https://underarmour.scene7.com/is/image/Underarmour/3023004-001_DEFAULT?wid=600&hei=600&fmt=jpg" alt="Under Armour" class="brand-shoe">
-                    <strong>Under Armour</strong><br>
                     <span>High-tech sports footwear.</span>
                     <div class="brand-price">$130</div>
-                    <div class="brand-colors">
-                        <span class="brand-color" style="background:#222;"></span>
-                        <span class="brand-color" style="background:#fff;"></span>
-                        <span class="brand-color" style="background:#1a73e8;"></span>
-                    </div>
+                    
+                </li>
+                <li data-brand="Jordan 4">
+                    <span class="brand-label">Jordan 4</span>
+                    <img src="https://images.stockx.com/images/Air-Jordan-4-Retro-Red-Thunder-Product.jpg" alt="Jordan 4" class="brand-shoe">
+                    <span>Iconic basketball sneaker with bold style.</span>
+                    <div class="brand-price">$220</div>
+                    
+                </li>
+                <li data-brand="Air Max">
+                    <span class="brand-label">Air Max</span>
+                    <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,q_auto:eco/2b1b2e2e-2e2e-4e2e-8e2e-2e2e2e2e2e2e/air-max-270-mens-shoes-KkLcGR.png" alt="Nike Air Max" class="brand-shoe">
+                    <span>Modern comfort with classic Air Max cushioning.</span>
+                    <div class="brand-price">$150</div>
+                    
                 </li>
             </ul>
         </section>
-        <section id="clients-info">
-            <h2>Clients Information</h2>
-            <ul>
-                <li>Client 1: John Doe</li>
-                <li>Client 2: Jane Smith</li>
-                <li>Client 3: Alice Johnson</li>
-            </ul>
-        </section>
+        <!-- Partner Marquee -->
+         <!-- Marquee for Partner Logos -->
+        <section class="partner-marquee" aria-label="Our Partners">
+  <div class="partner-marquee-track">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/nike.svg" alt="Nike" class="partner-logo" />
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/adidas.svg" alt="Adidas" class="partner-logo" />
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/puma.svg" alt="Puma" class="partner-logo" />
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jordan.svg" alt="Jordan" class="partner-logo" />
+    <!-- Add more logos as needed -->
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/nike.svg" alt="Nike" class="partner-logo" />
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/adidas.svg" alt="newbalance" class="partner-logo" />
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/puma.svg" alt="Puma" class="partner-logo" />
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jordan.svg" alt="Jordan" class="partner-logo" />
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/nike.svg" alt="skechers" class="partner-logo" />
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/adidas.svg" alt="Adidas" class="partner-logo" />
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/puma.svg" alt="Puma" class="partner-logo" />
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jordan.svg" alt="Jordan" class="partner-logo" />
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/nike.svg" alt="converse" class="partner-logo" />
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/adidas.svg" alt="clarkes" class="partner-logo" />
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/puma.svg" alt="timberland" class="partner-logo" />
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jordan.svg" alt="bata" class="partner-logo" />
+  </div>
+</section>
+        <section class="feedback-section">
+  <h2>What Our Clients Say</h2>
+  <div class="feedback-list">
+    <div class="feedback-card">
+      <p>"Amazing service! Highly recommend."</p>
+      <span>- Alex P.</span>
+    </div>
+    <div class="feedback-card">
+      <p>"Professional and quick response."</p>
+      <span>- Jamie L.</span>
+    </div>
+    <div class="feedback-card">
+      <p>"Great experience from start to finish."</p>
+      <span>- Morgan S.</span>
+    </div>
+  </div>
+</section>
+        <section id="about-team" class="tab-section">
+            <h2>Our Team</h2>
+            <div class="tabs" role="tablist">
+                <button class="tab-btn active" data-tab="founders" role="tab" aria-selected="true" aria-controls="founders" id="tab-founders">Founding Members</button>
+                <button class="tab-btn" data-tab="stakeholders" role="tab" aria-selected="false" aria-controls="stakeholders" id="tab-stakeholders">Stakeholders</button>
+                <button class="tab-btn" data-tab="customer-exp" role="tab" aria-selected="false" aria-controls="customer-exp" id="tab-customer-exp">Customer Experience</button>
+            </div>
+            <div class="tab-content" id="founders" role="tabpanel" aria-labelledby="tab-founders" style="display:block;">
+                <h3>Founding Members</h3>
+                <ul>
+                    <li><strong>Nicholas Mwania</strong> – CEO & Co-Founder. Visionary behind Shoe Store’s mission.</li>
+                    <li><strong>Josephine Muthoni</strong> – COO & Co-Founder. Operations and customer experience expert.</li>
+                    <li><strong>Puis Kamau</strong> – CTO & Co-Founder. Leads technology and innovation.</li>
+                </ul>
+            </div>
+            <div class="tab-content" id="stakeholders" role="tabpanel" aria-labelledby="tab-stakeholders" style="display:none;">
+                <h3>Key Stakeholders</h3>
+                <ul>
+                    <li><strong>Global Brands Inc.</strong> – Major investor and strategic partner.</li>
+                    <li><strong>Jane Doe</strong> – Board Member, retail industry expert.</li>
+                    <li><strong>VentureX Capital</strong> – Early-stage investor supporting growth.</li>
+                </ul>
+            </div>
+            <div class="tab-content" id="customer-exp" role="tabpanel" aria-labelledby="tab-customer-exp" style="display:none;">
+                <h3>Customer Experience</h3>
+                <div class="customer-auth-tabs">
+                    <button class="auth-btn active" data-auth="login">
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+                <div class="auth-content" id="login-auth" style="display:block;">
+                <div class="auth-content" id="signup-auth" style="display:none;">
+                    <form id="tabSignupForm">
+                        <label for="tabSignupEmail">Email:</label>
+                        <input type="email" id="tabSignupEmail" name="tabSignupEmail" required>
+                        <label for="tabSignupPassword">Password:</label>
+                        <input type="password" id="tabSignupPassword" name="tabSignupPassword" required>
+                        <label for="tabSignupConfirm">Confirm Password:</label>
+                        <input type="password" id="tabSignupConfirm" name="tabSignupConfirm" required>
+                        <button type="submit">Signup</button>
+                    </form>
+                </div>  
+            </div>   
+        </section>      
+        <section>
+            <div class="left-section">
+                <section id="faq" class="faq-section" style="background: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat; padding: 3em 0;">
+  <div class="faq-overlay" style="background:rgba(255,255,255,0.85);padding:2em 1em;max-width:700px;margin:auto;border-radius:18px;box-shadow:0 8px 32px rgba(0,0,0,0.08);">
+    <h2 style="text-align:center;margin-bottom:1.5em;">Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <button class="faq-question">How long does shipping take?</button>
+      <div class="faq-answer" style="display:none;">Shipping usually takes 3-5 business days within the country.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Can I return or exchange my shoes?</button>
+      <div class="faq-answer" style="display:none;">Yes! Returns and exchanges are accepted within 14 days of delivery.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Do you offer international shipping?</button>
+      <div class="faq-answer" style="display:none;">Yes, we ship to select international locations. Please check our shipping policy for details.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">How can I track my order?</button>
+      <div class="faq-answer" style="display:none;">Once your order is shipped, you will receive a tracking number via email.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">What payment methods do you accept?</button>
+      <div class="faq-answer" style="display:none;">We accept all major credit cards, PayPal, and Apple Pay.</div>
+    </div>
+  </div>
+</section>
+    </div>
+    </section>
     </main>
-    <footer>
-        <ul>
-            <li>terms of use</li>
-            <li>privacy policy</li>
-            <li>cookie policy</li>
-        </ul>
-        <div class="social-media">
-            <a href="https://instagram.com/yourbrand" target="_blank" aria-label="Instagram"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
-            <a href="https://facebook.com/yourbrand" target="_blank" aria-label="Facebook"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
-            <a href="https://twitter.com/yourbrand" target="_blank" aria-label="Twitter"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter"></a>
-            <a href="https://tiktok.com/@yourbrand" target="_blank" aria-label="TikTok"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok"></a>
+    <!-- Info Cards Section -->
+<section class="info-cards-section">
+  <h2>Discover More</h2>
+  <div class="info-cards">
+    <div class="info-card">
+      <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=80" alt="Sneaker Trends">
+      <div class="info-card-content">
+        <h3>Latest Sneaker Trends</h3>
+        <p>Stay ahead with the newest releases and styles in the sneaker world.</p>
+        <a href="#" class="info-card-btn">Learn More</a>
+      </div>
+    </div>
+    <div class="info-card">
+      <img src="https://images.unsplash.com/photo-1528701800484-905dffb7c6b4?auto=format&fit=crop&w=400&q=80" alt="Care Tips">
+      <div class="info-card-content">
+        <h3>Shoe Care Tips</h3>
+        <p>Keep your kicks fresh and clean with our expert care guides.</p>
+        <a href="#" class="info-card-btn">Read Tips</a>
+      </div>
+    </div>
+    <div class="info-card">
+      <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Brand Stories">
+      <div class="info-card-content">
+        <h3>Brand Stories</h3>
+        <p>Discover the history and innovation behind your favorite brands.</p>
+        <a href="#" class="info-card-btn">Explore</a>
+      </div>
+    </div>
+    <!-- Shoe Info Card START -->
+    <div class="info-card">
+      <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,q_auto:eco/2b1b2e2e-2e2e-4e2e-8e2e-2e2e2e2e2e2e/air-max-270-mens-shoes-KkLcGR.png" alt="Nike Air Max" style="width:180px;border-radius:12px;">
+      <div class="info-card-content">
+        <h3>Nike Air Max 270</h3>
+        <p>Experience all-day comfort and iconic style with the Air Max 270.</p>
+        <button id="shoeInfoBtn" class="info-card-btn" style="background:#e63946;color:#fff;">More Info</button>
+      </div>
+    </div>
+    <!-- Shoe Info Card END -->
+  </div>
+</section>
+    <section class="newsletter-signup">
+        <h3>Subscribe to Our Newsletter</h3>
+        <form id="newsletterForm">
+            <input type="email" id="newsletterEmail" name="newsletterEmail" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <div id="newsletterMsg" style="margin-top:10px;"></div>
+    </section>
+    <!-- Store Locator Section -->
+    <section class="store-locator-section" id="store-locator" style="padding:2em 0;background:#f8fafc;">
+      <h2 style="text-align:center;">Find a Store Near You</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:2em;justify-content:center;align-items:flex-start;max-width:900px;margin:2em auto;">
+        <div style="flex:1;min-width:260px;">
+          <ul style="list-style:none;padding:0;">
+            <li>
+              <strong>Nairobi Flagship</strong><br>
+              123 Kenyatta Ave, Nairobi<br>
+              <span style="color:#1a73e8;">Open: 9am–8pm</span>
+            </li>
+            <li style="margin-top:1.2em;">
+              <strong>Mombasa City Mall</strong><br>
+              45 Moi Ave, Mombasa<br>
+              <span style="color:#1a73e8;">Open: 10am–7pm</span>
+            </li>
+            <li style="margin-top:1.2em;">
+              <strong>Kisumu Lakeside</strong><br>
+              78 Oginga Odinga Rd, Kisumu<br>
+              <span style="color:#1a73e8;">Open: 10am–6pm</span>
+            </li>
+          </ul>
         </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-    $(document).ready(function() {
-        $('#loginBtn').click(function(e) {
-            e.preventDefault();
-            $('#loginModal').show();
-        });
-        $('#signupBtn').click(function(e) {
-            e.preventDefault();
-            $('#signupModal').show();
-        });
-        $('#closeLogin').click(function() {
-            $('#loginModal').hide();
-        });
-        $('#closeSignup').click(function() {
-            $('#signupModal').hide();
-        });
-        $(window).on('click', function(e) {
-            if ($(e.target).is('#loginModal')) $('#loginModal').hide();
-            if ($(e.target).is('#signupModal')) $('#signupModal').hide();
-        });
-        $('#loginForm').submit(function(e) {
-            e.preventDefault();
-            alert('Login successful! (Demo only)');
-            $('#loginModal').hide();
-        });
-        $('#signupForm').submit(function(e) {
-            e.preventDefault();
-            if ($('#signupPassword').val() !== $('#signupConfirm').val()) {
-                alert('Passwords do not match!');
-                return;
-            }
-            alert('Signup successful! (Demo only)');
-            $('#signupModal').hide();
-        });
+        <div style="flex:2;min-width:320px;">
+          <iframe
+            title="Store Locator Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.0472672647!2d36.8064952!3d-1.2863896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d6e2b2e2e2%3A0x2e2e2e2e2e2e2e2e!2sNairobi!5e0!3m2!1sen!2ske!4v1680000000000!5m2!1sen!2ske"
+            width="100%" height="260" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+    <footer>
+  <!-- Social Media Icons -->
+  <div class="footer-social" style="text-align:center; margin-bottom:1em;">
+    <a href="https://facebook.com" target="_blank" aria-label="Facebook" style="margin:0 0.5em; color:#4267B2; font-size:1.7em;"><i class="fab fa-facebook"></i></a>
+    <a href="https://twitter.com" target="_blank" aria-label="Twitter" style="margin:0 0.5em; color:#1DA1F2; font-size:1.7em;"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com" target="_blank" aria-label="Instagram" style="margin:0 0.5em; color:#E1306C; font-size:1.7em;"><i class="fab fa-instagram"></i></a>
+    <a href="https://tiktok.com" target="_blank" aria-label="TikTok" style="margin:0 0.5em; color:#000; font-size:1.7em;"><i class="fab fa-tiktok"></i></a>
+  </div>
+  <!-- reviews and ratings -->
+  <div class="review-section" style="margin-top:1em;">
+    <div class="star-rating" data-rating="0" style="font-size:1.5em; color:#ffd700; cursor:pointer;">
+      <span class="star" data-value="1">&#9733;</span>
+      <span class="star" data-value="2">&#9733;</span>
+      <span class="star" data-value="3">&#9733;</span>
+      <span class="star" data-value="4">&#9733;</span>
+      <span class="star" data-value="5">&#9733;</span>
+    </div>
+    <form class="review-form" style="margin-top:0.5em;">
+      <input type="text" class="reviewer-name" placeholder="Your name" required style="padding:0.4em;">
+      <input type="text" class="reviewer-comment" placeholder="Write a review..." required style="padding:0.4em;">
+      <button type="submit" style="padding:0.4em 1em; background:#e63946; color:#fff; border:none; border-radius:6px;">Submit</button>
+    </form>
+    <div class="reviews-list" style="margin-top:0.7em;"></div>
+  </div>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+$(function() {
+    // Modal logic
+    $('#loginBtn').click(function(e) {
+        e.preventDefault();
+        $('#loginModal').show();
     });
-    </script>
+    $('#signupBtn').click(function(e) {
+        e.preventDefault();
+        $('#signupModal').show();
+    });
+    $('#closeLogin').click(function() {
+        $('#loginModal').hide();
+    });
+    $('#closeSignup').click(function() {
+        $('#signupModal').hide();
+    });
+    $(window).on('click', function(e) {
+        if ($(e.target).is('#loginModal')) $('#loginModal').hide();
+        if ($(e.target).is('#signupModal')) $('#signupModal').hide();
+    });
+    $('#loginForm').submit(function(e) {
+        e.preventDefault();
+        alert('Welcome back to SoleStyle!');
+        $('#loginModal').hide();
+    });
+    $('#signupForm').submit(function(e) {
+        e.preventDefault();
+        if ($('#signupPassword').val() !== $('#signupConfirm').val()) {
+            alert('Passwords do not match!');
+            return;
+        }
+        alert('Congratulations! You have successfully joined SoleStyle. Welcome to our community!');
+        $('#signupModal').hide();
+    });
+    // Team tabs
+    $('.tab-btn').click(function() {
+        $('.tab-btn').removeClass('active');
+        $(this).addClass('active');
+        $('.tab-content').hide();
+        $('#' + $(this).data('tab')).show();
+    });
+    // Customer Experience auth tabs
+    $('.customer-auth-tabs').on('click', '.auth-btn', function() {
+        $('.auth-btn').removeClass('active');
+        $(this).addClass('active');
+        $('.auth-content').hide();
+        if ($(this).data('auth') === 'login') {
+            $('#login-auth').show();
+        } else {
+            $('#signup-auth').show();
+        }
+    });
+    // Demo form handlers for tabbed forms
+    $('#tabLoginForm').submit(function(e) {
+        e.preventDefault();
+        alert('Welcome back to SoleStyle!');
+    });
+    $('#tabSignupForm').submit(function(e) {
+        e.preventDefault();
+        if ($('#tabSignupPassword').val() !== $('#tabSignupConfirm').val()) {
+            alert('Passwords do not match!');
+            return;
+        }
+        alert('Congratulations! You have successfully joined SoleStyle. Welcome to our community!');
+    });
+});
+// Review form logic
+$('.review-form').submit(function(e) {
+    e.preventDefault();
+    const name = $('.reviewer-name').val().trim();
+    const comment = $('.reviewer-comment').val().trim();
+    const rating = $('.star-rating').data('rating') || 0;
+    if (!name || !comment || rating === 0) {
+        alert('Please enter your name, review, and select a rating.');
+        return;
+    }
+    // Create review HTML
+    const reviewHtml = `
+        <div class="review-item" style="margin-bottom:0.5em;">
+            <strong>${$('<div>').text(name).html()}</strong>
+            <span style="color:#ffd700;">${'&#9733;'.repeat(rating)}</span>
+            <div>${$('<div>').text(comment).html()}</div>
+        </div>
+    `;
+    $('.reviews-list').prepend(reviewHtml);
+    // Reset form
+    $('.review-form')[0].reset();
+    $('.star-rating').data('rating', 0).find('.star').css('color', '#ffd700');
+    showToast("Thank you for your review!");
+});
+// Star rating logic
+$('.star-rating .star').on('mouseenter click', function() {
+    const value = $(this).data('value');
+    $('.star-rating .star').each(function() {
+        $(this).css('color', $(this).data('value') <= value ? '#ffd700' : '#ccc');
+    });
+});
+$('.star-rating .star').on('click', function() {
+    const value = $(this).data('value');
+    $('.star-rating').data('rating', value);
+});
+$('.star-rating').on('mouseleave', function() {
+    const rating = $(this).data('rating') || 0;
+    $('.star-rating .star').each(function() {
+        $(this).css('color', $(this).data('value') <= rating ? '#ffd700' : '#ccc');
+    });
+});
+
+// Toast notification function
+function showToast(message) {
+    $('#toast').text(message).fadeIn(300);
+    setTimeout(function() {
+        $('#toast').fadeOut(400);
+    }, 2200);
+}
+</script>
+<!-- Shoe Info Modal -->
+<div id="shoeInfoModal" class="modal" style="display:none;">
+  <div class="modal-content" style="max-width:400px;margin:auto;padding:2em;background:#fff;border-radius:18px;position:relative;">
+    <span class="close" id="closeShoeInfo" style="position:absolute;top:12px;right:18px;font-size:2em;cursor:pointer;">&times;</span>
+    <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,q_auto:eco/2b1b2e2e-2e2e-4e2e-8e2e-2e2e2e2e2e2e/air-max-270-mens-shoes-KkLcGR.png" alt="Nike Air Max" style="width:160px;border-radius:10px;">
+    <h3>Nike Air Max 270</h3>
+    <ul style="text-align:left;">="display:none;">
+      <li><strong>Price:</strong> $120</li>n:auto;padding:2em;background:#fff;border-radius:18px;position:relative;">
+      <li><strong>Colors:</strong> Black, White, Red</li>le="position:absolute;top:12px;right:18px;font-size:2em;cursor:pointer;">&times;</span>
+      <li><strong>Sizes:</strong> 7-13 US</li>r Max" style="width:160px;border-radius:10px;">
+      <li><strong>Description:</strong> The Air Max 270 features Nike’s biggest heel Air unit yet for a super-soft ride that feels as impossible as it looks.</li>ike Air Max 270</h3>
+    </ul>style="text-align:left;">
+  </div><li><strong>Price:</strong> $120</li>
+</div> <li><strong>Colors:</strong> Black, White, Red</li>
+
+</section>
+</div>
 </body>
 </html>
